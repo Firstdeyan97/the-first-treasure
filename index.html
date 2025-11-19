@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Firstdeyan Treasure — Toko Perhiasan Elegan & Modern</title>
+  <meta name="description" content="The Firstdeyan Treasure: perhiasan elegan dan modern. Cincin, kalung, gelang, anting dengan kualitas terbaik." />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>Gratis pengiriman untuk pesanan di atas Rp1.000.000</span>
+      <div class="top-actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        <a href="#contact" class="whatsapp-link">Hubungi via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="brand">
+        <img src="assets/img/logo.jpg" alt="The Firstdeyan Treasure" />
+        <span>The Firstdeyan Treasure</span>
+      </a>
+      <nav class="menu">
+        <a href="#home">Beranda</a>
+        <a href="#collections">Koleksi</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#testimonials">Testimoni</a>
+        <a href="#contact">Kontak</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="searchOpen" class="icon-btn" aria-label="Buka pencarian">🔍</button>
+        <button id="wishlistOpen" class="icon-btn" aria-label="Buka wishlist">🤍</button>
+        <button id="cartOpen" class="icon-btn" aria-label="Buka keranjang">🛒</button>
+        <button id="mobileMenu" class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer" class="drawer">
+    <nav class="drawer-menu">
+      <a href="#home" class="drawer-link">Beranda</a>
+      <a href="#collections" class="drawer-link">Koleksi</a>
+      <a href="#about" class="drawer-link">Tentang Kami</a>
+      <a href="#testimonials" class="drawer-link">Testimoni</a>
+      <a href="#contact" class="drawer-link">Kontak</a>
+      <a href="#faq" class="drawer-link">FAQ</a>
+    </nav>
+  </div>
+
+  <!-- Search Overlay -->
+  <div id="searchOverlay" class="overlay">
+    <div class="overlay-content">
+      <input type="text" id="searchInput" placeholder="Cari cincin, kalung, gelang, anting..." autofocus />
+      <button id="searchClose" class="close">✕</button>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Koleksi Perhiasan Elegan untuk Momen Berharga</h1>
+        <p>Desain modern, kualitas premium, dan sentuhan personal. Temukan harta pertama Anda bersama The Firstdeyan Treasure.</p>
+        <div class="hero-actions">
+          <a href="#collections" class="btn primary">Lihat Koleksi</a>
+          <a href="#contact" class="btn ghost">Konsultasi Gratis</a>
+        </div>
+        <div class="hero-highlights">
+          <div class="chip">Material: Emas 18K & 24K</div>
+          <div class="chip">Kustom Ukuran & Ukir Nama</div>
+          <div class="chip">Garansi Keaslian</div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/img/hero.png" alt="Koleksi perhiasan The Firstdeyan Treasure" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections -->
+  <section id="collections" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Koleksi Terbaru</h2>
+        <p>Pilih kategori atau gunakan pencarian untuk menemukan perhiasan favorit.</p>
+      </div>
+
+      <div class="filters">
+        <div class="filter-left">
+          <button class="tag active" data-filter="all">Semua</button>
+          <button class="tag" data-filter="cincin">Cincin</button>
+          <button class="tag" data-filter="kalung">Kalung</button>
+          <button class="tag" data-filter="gelang">Gelang</button>
+          <button class="tag" data-filter="anting">Anting</button>
+        </div>
+        <div class="filter-right">
+          <select id="sortSelect" aria-label="Urutkan">
+            <option value="newest">Terbaru</option>
+            <option value="priceLow">Harga Terendah</option>
+            <option value="priceHigh">Harga Tertinggi</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="productGrid" class="grid"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section about">
+    <div class="container about-grid">
+      <div class="about-media">
+        <img src="assets/img/about.jpg" alt="Tentang The Firstdeyan Treasure" />
+      </div>
+      <div class="about-text">
+        <h2>Tentang The Firstdeyan Treasure</h2>
+        <p>Berawal dari kecintaan pada desain elegan, kami menghadirkan perhiasan berkualitas tinggi dengan detail yang memukau. Setiap produk melalui proses kurasi ketat untuk memastikan keindahan dan ketahanan jangka panjang.</p>
+        <ul class="features">
+          <li><strong>Material premium:</strong> Emas 18K/24K, berlian berkualitas, perak sterling.</li>
+          <li><strong>Kustomisasi:</strong> Ukuran, ukir nama, paket hadiah eksklusif.</li>
+          <li><strong>Garansi & layanan:</strong> Sertifikat keaslian, perawatan gratis 1 tahun.</li>
+        </ul>
+        <a href="#contact" class="btn primary">Tanya Katalog Lengkap</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Testimoni Pelanggan</h2>
+        <p>Pengalaman berbelanja yang meyakinkan dan berkesan.</p>
+      </div>
+      <div class="testi-grid">
+        <article class="testi-card">
+          <p>“Cincinnya indah dan pas! Pelayanan ramah, proses cepat.”</p>
+          <div class="testi-meta">
+            <span class="name">Nadia</span><span class="rating">★★★★★</span>
+          </div>
+        </article>
+        <article class="testi-card">
+          <p>“Kalung Luna sangat elegan, cocok untuk acara formal.”</p>
+          <div class="testi-meta">
+            <span class="name">Raka</span><span class="rating">★★★★★</span>
+          </div>
+        </article>
+        <article class="testi-card">
+          <p>“Paket hadiah rapi, kesan mewah. Pasti repeat order!”</p>
+          <div class="testi-meta">
+            <span class="name">Melati</span><span class="rating">★★★★★</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container contact-grid">
+      <div>
+        <h2>Kontak & Konsultasi</h2>
+        <p>Butuh rekomendasi atau kustomisasi? Kami siap bantu.</p>
+        <ul class="contact-info">
+          <li><strong>WhatsApp:</strong> <a id="waLink" href="#" target="_blank" rel="noopener">Chat sekarang</a></li>
+          <li><strong>Email:</strong> <a href="mailto:hello@thefirsttreasure.com">hello@thefirsttreasure.com</a></li>
+          <li><strong>Lokasi:</strong> Pamulang, Banten</li>
+          <li><strong>Jam buka:</strong> Sen–Sab 09.00–18.00 WIB</li>
+        </ul>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <div class="form-row">
+          <input type="text" id="cfName" placeholder="Nama" required />
+          <input type="tel" id="cfPhone" placeholder="Nomor WhatsApp" required />
+        </div>
+        <textarea id="cfMessage" rows="5" placeholder="Pesan / produk yang diminati" required></textarea>
+        <button type="submit" class="btn primary">Kirim ke WhatsApp</button>
+        <small class="form-note">Dengan menekan tombol, Anda akan diarahkan ke WhatsApp.</small>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>FAQ</h2>
+        <p>Pertanyaan yang sering diajukan.</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Apakah bisa kustom ukuran dan ukir nama?</summary>
+          <p>Bisa. Sampaikan ukuran dan teks ukiran saat pemesanan.</p>
+        </details>
+        <details>
+          <summary>Bagaimana cara pembayaran?</summary>
+          <p>Transfer bank, e-wallet, atau COD (area tertentu).</p>
+        </details>
+        <details>
+          <summary>Apakah ada garansi?</summary>
+          <p>Garansi keaslian material dan perawatan gratis 1 tahun.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo.jpg" alt="The Firstdeyan Treasure" />
+        <p>Perhiasan elegan untuk setiap momen berharga.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#collections">Koleksi</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="foot-legal">
+        <span>© 2025 The Firstdeyan Treasure</span>
+        <a href="#">Kebijakan Privasi</a>
+        <a href="#">Syarat & Ketentuan</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick View Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="close" id="modalClose">✕</button>
+      <div class="modal-body">
+        <img id="modalImg" alt="Produk" />
+        <div>
+          <h3 id="modalTitle"></h3>
+          <p id="modalCategory"></p>
+          <p id="modalPrice" class="price"></p>
+          <p id="modalDesc"></p>
+          <div class="modal-actions">
+            <button id="modalWishlist" class="btn ghost">🤍 Wishlist</button>
+            <button id="modalCart" class="btn primary">🛒 Tambah ke Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawers for Wishlist/Cart -->
+  <div id="panel" class="side-panel">
+    <div class="panel-header">
+      <h3 id="panelTitle">Keranjang</h3>
+      <button id="panelClose" class="close">✕</button>
+    </div>
+    <div id="panelList" class="panel-list"></div>
+    <div class="panel-footer">
+      <button id="panelClear" class="btn ghost">Hapus Semua</button>
+      <a id="panelCheckout" href="#" class="btn primary" target="_blank" rel="noopener">Checkout via WhatsApp</a>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
